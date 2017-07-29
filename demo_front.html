@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script src="./ports.json"></script>
+<script>
+    let xhr = new XMLHttpRequest();
+    xhr.open('GET', './ports.json', false);
+    xhr.onload = function () {
+        window.ports = JSON.parse(xhr.responseText);
+    }
+    xhr.send();
+    console.log(ports);
+</script>
